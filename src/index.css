@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user{
+  color: black;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  height: 30px;
+  margin: 5px;
+}
+
+button {
+  width: 145px;
+  height: 30px;
+  background-color: teal;
+  color: white;
+  border: none;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background-color: rgba(2, 100, 100, 0.474);
+  cursor: not-allowed;
+}
+
+span{
+  color: red;
+}
