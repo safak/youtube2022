@@ -21,7 +21,7 @@ import {
 } from "@mui/icons-material";
 import { Box } from "@mui/system";
 
-const SytledModal = styled(Modal)({
+const StyledModal = styled(Modal)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -51,7 +51,7 @@ const Add = () => {
           <AddIcon />
         </Fab>
       </Tooltip>
-      <SytledModal
+      <StyledModal
         open={open}
         onClose={(e) => setOpen(false)}
         aria-labelledby="modal-modal-title"
@@ -102,7 +102,7 @@ const Add = () => {
             </Button>
           </ButtonGroup>
         </Box>
-      </SytledModal>
+      </StyledModal>
     </>
   );
 };
