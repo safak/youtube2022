@@ -66,4 +66,40 @@
   input{
       background-color: transparent;
   }
+
+  .widget {
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0);
+    box-shadow: 2px 4px 10px 1px rgb(7, 7, 7);
+  }
+
+  .featured {
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0);
+    box-shadow: 2px 4px 10px 1px rgb(7, 7, 7);
+  }
+
+  .chart {
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0);
+    box-shadow: 2px 4px 10px 1px rgb(7, 7, 7);
+  }
+
+  .listContainer {
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0);
+    box-shadow: 2px 4px 10px 1px rgb(7, 7, 7);
+  }
+
+  .top {
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0);
+    box-shadow: 2px 4px 10px 1px rgb(7, 7, 7);
+  }
+
+  .bottom {
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0);
+    box-shadow: 2px 4px 10px 1px rgb(7, 7, 7);
+  }
+
+  .homeContainer {
+    background-color: #111;
+  }
+
+
 }
