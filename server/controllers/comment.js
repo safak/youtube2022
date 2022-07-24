@@ -20,7 +20,7 @@ export const deleteComment = async (req, res, next) => {
       await Comment.findByIdAndDelete(req.params.id);
       res.status(200).json("The comment has been deleted.");
     } else {
-      return next(createError(403, "You can delete ony your comment!"));
+      return next(createError(403, "You can delete only your comment!"));
     }
   } catch (err) {
     next(err);
