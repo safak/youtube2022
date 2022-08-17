@@ -1,0 +1,29 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+button {
+  cursor: pointer;
+}
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+small {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1px 10px;
+  cursor: pointer;
+}
+.quantity{
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
