@@ -58,7 +58,7 @@ export const subscribe = async (req, res, next) => {
 };
 
 export const unsubscribe = async (req, res, next) => {
-  try {
+  
     try {
       await User.findByIdAndUpdate(req.user.id, {
         $pull: { subscribedUsers: req.params.id },
@@ -70,9 +70,7 @@ export const unsubscribe = async (req, res, next) => {
     } catch (err) {
       next(err);
     }
-  } catch (err) {
-    next(err);
-  }
+
 };
 
 export const like = async (req, res, next) => {
