@@ -25,7 +25,7 @@ const Register = () => {
 
       //Create a unique image name
       const date = new Date().getTime();
-      const storageRef = ref(storage, displayName + date);
+      const storageRef = ref(storage, `${displayName + date}`);
 
       await uploadBytesResumable(storageRef, file).then(() => {
         getDownloadURL(storageRef).then(async (downloadURL) => {
