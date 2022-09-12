@@ -138,6 +138,9 @@ const Video = () => {
     };
     fetchData();
   }, [path, dispatch]);
+  
+  if(!currentUser) return 'Loading....';
+  
 
   const handleLike = async () => {
     await axios.put(`/users/like/${currentVideo._id}`);
