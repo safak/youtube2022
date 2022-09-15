@@ -32,13 +32,14 @@ const Search = styled.div`
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
+   color: ${({ theme }) => theme.text};
 `;
 
 const Input = styled.input`
   border: none;
   background-color: transparent;
   outline: none;
-  color: ${({ theme }) => theme.text};
+ 
 `;
 
 const Button = styled.button`
