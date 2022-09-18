@@ -1,0 +1,80 @@
+.app {
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .addHome {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .books {
+    display: flex;
+
+    .book {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      button {
+        padding: 3px 6px;
+        background-color: white;
+        cursor: pointer;
+      }
+      .delete {
+        border: 1px solid rgb(245, 191, 191);
+        color: rgb(242, 100, 100);
+      }
+      .update {
+        border: 1px solid rgb(204, 204, 243);
+        color: rgb(139, 139, 234);
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      width: 250px;
+      padding: 10px;
+      border: 1px solid gray;
+    }
+
+    textarea {
+      padding: 10px;
+    }
+
+    button {
+      border: none;
+      padding: 10px;
+      background-color: white;
+      background-color: teal;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
