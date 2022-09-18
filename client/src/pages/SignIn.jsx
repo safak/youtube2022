@@ -75,6 +75,8 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate()
+  
+ 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -110,7 +112,21 @@ const SignIn = () => {
   };
 
   //TODO: REGISTER FUNCTIONALITY
-
+  
+  // Completeing TODO
+  
+ const handleSignup = async (e) =>{
+    e.preventDefault();
+    dispatch(loginStart());
+    try {
+      const res = await axios.post("/auth/signup", { name, email, password });
+      dispatch(loginSuccess(res.data));
+      navigate("/")
+    } catch (err) {
+      dispatch(loginFailure());
+    }
+    
+  }
 
   return (
     <Container>
@@ -140,7 +156,7 @@ const SignIn = () => {
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button>Sign up</Button>
+        <Button onClick={handleSignup}>Sign up</Button>
       </Wrapper>
       <More>
         English(USA)
