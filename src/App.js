@@ -8,6 +8,9 @@ import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import Badge from "./pages/Badge/Badge";
+import Notifications from "./pages/Notifications/Notifications";
+import Progress from "./pages/Progress/Progress";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -35,6 +38,9 @@ function App() {
                 element={<New inputs={productInputs} title="Add New Product" />}
               />
             </Route>
+            <Route path="bagde" element={<Badge />} />
+            <Route path="notification" element={<Notifications />} />
+            <Route path="progress" element={<Progress />} />
           </Route>
         </Routes>
       </BrowserRouter>

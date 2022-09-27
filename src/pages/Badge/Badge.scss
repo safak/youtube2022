@@ -1,0 +1,23 @@
+.list {
+    display: flex;
+    width: 100%;
+    .listContainer {
+      flex: 6;
+    }
+    .container{
+        margin: 20px 0 0px 20px;
+    }
+    .card{
+        margin: 20px;
+        width: 70%;
+        padding: 10px;
+        display: flex;
+      
+        justify-content: space-around;
+    }
+    .chips{
+            
+    }
+
+  }
+  
