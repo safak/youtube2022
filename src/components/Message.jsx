@@ -17,9 +17,8 @@ const getMessageTime = () => {
       timenum.seconds * 1000 + timenum.nanoseconds / 10000
     );
     var today = new Date();
-    console.log(lastMessage.getMinutes() + " " + today.getMinutes());
     if (today.toLocaleDateString() === lastMessage.toLocaleDateString()) {
-      if (lastMessage.getMinutes() == Number(today.getMinutes()) + 1)
+     if (Number(lastMessage) >= Number(today)) 
         return "Just Now";
       else return lastMessage.toLocaleTimeString();
     } else return lastMessage.toLocaleDateString();
