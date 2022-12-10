@@ -84,7 +84,7 @@ const showQuestion = (qNumber) => {
         `
   <div class="answer">
       <input type="radio" id=${index} name="answer" value=${item.isCorrect} />
-      <label for="1">${item.answer}</label>
+      <label for="${index}">${item.answer}</label>
   </div>
   `
     )
