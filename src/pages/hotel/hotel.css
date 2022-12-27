@@ -113,7 +113,8 @@
   position: sticky;
   top: 0;
   left: 0;
-  width: 100vw;
+/*   changing width from 100vw to 100% to remove scroll bar */
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.613);
   z-index: 999;
