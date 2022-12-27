@@ -7,7 +7,8 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 50px;
+/*  setting right and left padding to 0 to remove scrollbar  */
+  padding: 50px 0px;  
 }
 
 .mailInputContainer>input{
