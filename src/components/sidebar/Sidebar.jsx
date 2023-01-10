@@ -14,6 +14,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import { width } from "@mui/system";
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -21,17 +22,22 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">lamadmin</span>
+          <span className="logo">
+            Unicohub
+            </span>
         </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
+         {/* <li>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
+          </Link>
           </li>
+          
           <p className="title">LISTS</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
@@ -80,6 +86,7 @@ const Sidebar = () => {
             <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
           </li>
+          */}
           <li>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>

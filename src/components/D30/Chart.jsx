@@ -9,21 +9,25 @@ import {
 } from "recharts";
 
 const data = [
-  { name: "January", Total: 10000 },
-  { name: "February", Total: 9150 },
-  { name: "March", Total: 6554 },
-  { name: "April", Total: 9978 },
-  { name: "May", Total: 8020 },
-  { name: "June", Total: 5045 },
-  { name: "July", Total: 10250 },
-  { name: "August", Total: 7546 },
-  { name: "September", Total: 3458 },
-  { name: "October", Total: 7845 },
-  { name: "November", Total: 8596},
-  { name: "December", Total: 9875 },
+  { name: "0", Total: 10},
+  { name: "2", Total: 94},
+  { name: "4", Total: 65},
+  { name: "6", Total: 99},
+  { name: "8", Total: 80},
+  { name: "10", Total: 50},
+  { name: "12", Total: 100},
+  { name: "14", Total: 75},
+  { name: "16", Total: 34},
+  { name: "18", Total: 78},
+  { name: "20", Total: 85},
+  { name: "22", Total: 98},
+  { name: "24", Total: 64},
+  { name: "26", Total: 98},
+  { name: "28", Total: 75},
+  { name: "30", Total: 34},
 ];
 
-const Chart = ({ aspect, title }) => {
+const D30 = ({ aspect, title }) => {
   return (
     <div className="chart">
       <div className="title">{title}</div>
@@ -56,4 +60,4 @@ const Chart = ({ aspect, title }) => {
   );
 };
 
-export default Chart;
+export default D30;

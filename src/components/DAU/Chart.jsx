@@ -9,21 +9,25 @@ import {
 } from "recharts";
 
 const data = [
-  { name: "January", Total: 10000 },
-  { name: "February", Total: 9150 },
-  { name: "March", Total: 6554 },
-  { name: "April", Total: 9978 },
-  { name: "May", Total: 8020 },
-  { name: "June", Total: 5045 },
-  { name: "July", Total: 10250 },
-  { name: "August", Total: 7546 },
-  { name: "September", Total: 3458 },
-  { name: "October", Total: 7845 },
-  { name: "November", Total: 8596},
-  { name: "December", Total: 9875 },
+  { name: "0", Total: 10220},
+  { name: "2", Total: 9445},
+  { name: "4", Total: 6545},
+  { name: "6", Total: 9979},
+  { name: "8", Total: 8045},
+  { name: "10", Total: 5078},
+  { name: "12", Total: 10020},
+  { name: "14", Total: 7578},
+  { name: "16", Total: 3478},
+  { name: "18", Total: 7845},
+  { name: "20", Total: 8569},
+  { name: "22", Total: 9812},
+  { name: "24", Total: 6478},
+  { name: "26", Total: 9812},
+  { name: "28", Total: 7578},
+  { name: "30", Total: 3436},
 ];
 
-const Chart = ({ aspect, title }) => {
+const DAU = ({ aspect, title }) => {
   return (
     <div className="chart">
       <div className="title">{title}</div>
@@ -56,4 +60,4 @@ const Chart = ({ aspect, title }) => {
   );
 };
 
-export default Chart;
+export default DAU;

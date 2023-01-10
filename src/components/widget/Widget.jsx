@@ -8,16 +8,15 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 const Widget = ({ type }) => {
   let data;
 
-  //temporary
-  const amount = 100;
-  const diff = 20;
-
+ 
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "Total Users",
         isMoney: false,
         link: "See all users",
+        amount: 10520,
+        diff: 20,
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -31,9 +30,11 @@ const Widget = ({ type }) => {
       break;
     case "order":
       data = {
-        title: "ORDERS",
+        title: "Sign ups",
         isMoney: false,
         link: "View all orders",
+        amount:1205,
+        diff: 10,
         icon: (
           <ShoppingCartOutlinedIcon
             className="icon"
@@ -47,8 +48,10 @@ const Widget = ({ type }) => {
       break;
     case "earning":
       data = {
-        title: "EARNINGS",
-        isMoney: true,
+        title: "Opinion Tradings",
+        isMoney: false,
+        amount:512,
+        diff: 5,
         link: "View net earnings",
         icon: (
           <MonetizationOnOutlinedIcon
@@ -58,10 +61,27 @@ const Widget = ({ type }) => {
         ),
       };
       break;
+      case "liveshows":
+        data = {
+          title: "Live Shows",
+          isMoney: false,
+          amount: 51452,
+          diff: 45,
+          link: "View net earnings",
+          icon: (
+            <MonetizationOnOutlinedIcon
+              className="icon"
+              style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
+            />
+          ),
+        };
+        break;
     case "balance":
       data = {
-        title: "BALANCE",
+        title: "volume of Trades",
         isMoney: true,
+        amount :452,
+        diff: 5,
         link: "See details",
         icon: (
           <AccountBalanceWalletOutlinedIcon
@@ -83,14 +103,14 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney && "$"} {amount}
+          {data.isMoney && "$"} {data.amount}
         </span>
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
         <div className="percentage positive">
           <KeyboardArrowUpIcon />
-          {diff} %
+          {data.diff} %
         </div>
         {data.icon}
       </div>
