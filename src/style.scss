@@ -15,7 +15,7 @@
   }
   
   .formContainer {
-    background-color: #a7bcff;
+    background-color: #93f8ff;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@
       }
   
       .title {
-        color: #5d5b8d;
+        color: #1d5621;
         font-size: 12px;
       }
   
@@ -58,7 +58,7 @@
         }
   
         button {
-          background-color: #7b96ec;
+          background-color: #20742f;
           color: white;
           padding: 10px;
           font-weight: bold;
@@ -88,7 +88,7 @@
   }
   
   .home {
-    background-color: #a7bcff;
+    background-color: #93f8ff;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -107,13 +107,13 @@
   
       .sidebar {
         flex: 1;
-        background-color: #3e3c61;
+        background-color: #16651e;
         position: relative;
   
         .navbar {
           display: flex;
           align-items: center;
-          background-color: #2f2d52;
+          background-color: #2c9136;
           height: 50px;
           padding: 10px;
           justify-content: space-between;
@@ -206,7 +206,7 @@
   
         .chatInfo {
           height: 50px;
-          background-color: #5d5b8d;
+          background-color: #16651e;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -272,7 +272,7 @@
               .messageContent {
                 align-items: flex-end;
                 p {
-                  background-color: #8da4f1;
+                  background-color: #2c9136;
                   color: white;
                   border-radius: 10px 0px 10px 10px;
                 }
@@ -315,7 +315,7 @@
               border: none;
               padding: 10px 15px;
               color: white;
-              background-color: #8da4f1;
+              background-color: #ea8dff;
               cursor: pointer;
             }
           }
