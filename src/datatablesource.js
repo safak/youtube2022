@@ -1,8 +1,8 @@
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
-    field: "user",
-    headerName: "User",
+    field: "name",
+    headerName: "Nombre",
     width: 230,
     renderCell: (params) => {
       return (
@@ -14,28 +14,33 @@ export const userColumns = [
     },
   },
   {
-    field: "email",
-    headerName: "Email",
+    field: "lastname",
+    headerName: "Apellido",
     width: 230,
   },
 
   {
-    field: "age",
-    headerName: "Age",
+    field: "cedula",
+    headerName: "Cedula",
     width: 100,
   },
   {
-    field: "status",
-    headerName: "Status",
-    width: 160,
-    renderCell: (params) => {
-      return (
-        <div className={`cellWithStatus ${params.row.status}`}>
-          {params.row.status}
-        </div>
-      );
-    },
+    field: "movil",
+    headerName: "Telefono",
+    width: 100,
   },
+  // {
+  //   field: "status",
+  //   headerName: "Estado",
+  //   width: 160,
+  //   renderCell: (params) => {
+  //     return (
+  //       <div className={`cellWithStatus ${params.row.status}`}>
+  //         {params.row.status}
+  //       </div>
+  //     );
+  //   },
+  // },
 ];
 
 //temporary data
