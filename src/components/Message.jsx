@@ -11,7 +11,18 @@ const Message = ({ message }) => {
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
-
+const getMessageTime = () => {
+    const timenum = message.date;
+    const lastMessage = new Date(
+      timenum.seconds * 1000 + timenum.nanoseconds / 10000
+    );
+    var today = new Date();
+    if (today.toLocaleDateString() === lastMessage.toLocaleDateString()) {
+     if (Number(lastMessage) >= Number(today)) 
+        return "Just Now";
+      else return lastMessage.toLocaleTimeString();
+    } else return lastMessage.toLocaleDateString();
+  };
   return (
     <div
       ref={ref}
@@ -26,7 +37,7 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>just now</span>
+        <span>{getMessageTime()}</span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>
