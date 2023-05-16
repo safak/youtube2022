@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   .card {
     width: 50%;
@@ -31,8 +32,7 @@
         line-height: 100px;
       }
       
-      p {
-      }
+
 
       span {
         font-size: 14px;
@@ -49,7 +49,7 @@
       }
     }
 
-    .right {
+    .form {
       flex: 1;
       padding: 50px;
       display: flex;
@@ -69,11 +69,11 @@
         input {
         border: none;
         border-bottom: 1px solid lightgray;
-        padding: 20px 10px;
+        padding: 15px 10px;
         }
         
         button {
-          width: 50%;
+          width: 100%;
           padding: 10px;
           border: none;
           background-color: #938eef;
@@ -81,6 +81,7 @@
           font-weight: bold;
           cursor: pointer;
         }
+
       }
     }
   }

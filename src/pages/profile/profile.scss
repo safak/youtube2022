@@ -89,12 +89,12 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            // justify-content: space-around;
 
             .item {
               display: flex;
               align-items: center;
-              gap: 5px;
+              gap: 515px;
               color: themed("textColorSoft");
 
               span {

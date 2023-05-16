@@ -12,6 +12,7 @@ import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import { useContext } from "react";
 
@@ -24,11 +25,12 @@ const LeftBar = () => {
       <div className="container">
         <div className="menu">
           <div className="user">
+            <Link to={`/profile/${currentUser.id}`}>
             <img
-              src={currentUser.profilePic}
-              alt=""
-            />
-            <span>{currentUser.name}</span>
+              src={currentUser.profile}
+              alt=""/>
+            </Link>
+            <b>{currentUser.username}</b>
           </div>
           <div className="item">
             <img src={Friends} alt="" />
@@ -76,7 +78,7 @@ const LeftBar = () => {
           </div>
         </div>
         <hr />
-        <div className="menu">
+        {/* <div className="menu">
           <span>Others</span>
           <div className="item">
             <img src={Fund} alt="" />
@@ -90,7 +92,7 @@ const LeftBar = () => {
             <img src={Courses} alt="" />
             <span>Courses</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
