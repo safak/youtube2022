@@ -4,12 +4,11 @@ import moment from "moment";
 
 export const getStories = (req, res) => {
   const token = req.cookies.accessToken;
+  const userId = req.query.userId;
   if (!token) return res.status(401).json("Not logged in!");
 
   jwt.verify(token, "secretkey", (err, userInfo) => {
     if (err) return res.status(403).json("Token is not valid!");
-
-    console.log(userId);
 
     const q = `SELECT s.*, name FROM stories AS s JOIN users AS u ON (u.id = s.userId)
     LEFT JOIN relationships AS r ON (s.userId = r.followedUserId AND r.followerUserId= ?) LIMIT 4`;
