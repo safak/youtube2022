@@ -8,18 +8,17 @@
     "moment": "^2.29.4",
     "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22"
   },
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "type": "module"
+  "type": "module",
+  "description": ""
 }

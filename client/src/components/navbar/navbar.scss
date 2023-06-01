@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    height: 50px;
+    height: 34px;
     border-bottom: 1px solid themed("border");
     position: sticky;
     top: 0;
@@ -77,6 +77,7 @@
         }
 
         span {
+          width: 100%;
         }
       }
     }

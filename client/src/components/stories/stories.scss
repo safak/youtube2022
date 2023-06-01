@@ -46,7 +46,7 @@
       }
     }
 
-    button {
+    .btns {
       position: absolute;
       bottom: 40px;
       left: 10px;
@@ -61,6 +61,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include mobile {
+       left: 0;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       margin: auto;
+      }
+    }
+    .bntes {
+      position: absolute;
+      bottom: 38px;
+      left: 78px;
+      color: white;
+      background-color: #5271ff;
+      border: none;
+      cursor: pointer;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
 
       @include mobile {
        left: 0;

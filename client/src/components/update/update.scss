@@ -2,6 +2,7 @@
 
 .update {
   @include themify($themes) {
+    overflow: scroll;
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +17,6 @@
     .wrapper {
       margin: auto;
       width: 40%;
-      height: 70%;
       background-color: themed("bg");
       padding: 50px;
       z-index: 999;
