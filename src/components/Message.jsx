@@ -11,6 +11,9 @@ const Message = ({ message }) => {
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
+  const dateString = Date(message.date);
+  const date = new Date(dateString);
+  const timeString = date.toLocaleTimeString([], { hour12: false });
 
   return (
     <div
@@ -26,7 +29,7 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>just now</span>
+        <span>{timeString}</span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>
