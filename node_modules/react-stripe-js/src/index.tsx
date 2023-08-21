@@ -1,0 +1,4 @@
+import { loadStripe } from "@stripe/stripe-js";
+import PayNow from "./component/PayNow";
+
+export { loadStripe, PayNow }
