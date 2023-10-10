@@ -72,14 +72,14 @@
 }
 
 .home{
-    background-color: #048593;
+    background-color: #ffff;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .container{
-        border: 1px solid white;
+        border: 1px solid #000000;
         border-radius: 10px;
         width: 65%;
         height: 80%;
@@ -89,9 +89,11 @@
         .sidebar {
             flex: 1;
             background-color: #15213a;
+            border-right: 1px solid #000000;
         }
         .chat {
             flex: 2;
+            background-color: #048593;
         }
     }
 }
