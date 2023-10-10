@@ -49,6 +49,11 @@
                 border: none;
                 cursor: pointer;
             }
+
+            label{
+              display: flex;
+              align-items: center;
+            }
         }
         p{
             color: #048593;
