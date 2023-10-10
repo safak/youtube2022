@@ -53,6 +53,14 @@
             label{
               display: flex;
               align-items: center;
+              gap: 10px;
+              color: #048593;
+              font-size: 12px;
+              cursor: pointer;
+
+              img{
+                width: 32px;
+              }
             }
         }
         p{
