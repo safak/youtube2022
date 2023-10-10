@@ -85,7 +85,13 @@
         height: 80%;
         display: flex;
 
-        .sidebar{flex: 1;}
-        .chat{flex: 2;}
+        .sidebar{
+            flex: 1;
+            border-right: 1px solid #15213a;
+            background-color: #048593;
+        }
+        .chat{
+            flex: 2;
+        }
     }
 }
