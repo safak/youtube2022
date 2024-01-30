@@ -1,6 +1,32 @@
+// ../controllers/user.js
+
 import { db } from "../connect.js";
 import jwt from "jsonwebtoken";
+import express from "express";
+import multer from "multer";
+import path from "path";  // Import the 'path' module for handling paths
 
+const router = express.Router();
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    // Use 'path.join' to ensure a correct path
+    cb(null, path.join(__dirname, "../client/public/upload"));
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + file.originalname);
+  },
+});
+
+const upload = multer({ storage: storage });
+
+// Handle file upload
+router.post("/upload", upload.single("file"), (req, res) => {
+  const file = req.file;
+  res.status(200).json(file.filename);
+});
+
+// Get user by ID
 export const getUser = (req, res) => {
   const userId = req.params.userId;
   const q = "SELECT * FROM users WHERE id=?";
@@ -12,6 +38,7 @@ export const getUser = (req, res) => {
   });
 };
 
+// Update user details
 export const updateUser = (req, res) => {
   const token = req.cookies.accessToken;
   if (!token) return res.status(401).json("Not authenticated!");
@@ -20,7 +47,7 @@ export const updateUser = (req, res) => {
     if (err) return res.status(403).json("Token is not valid!");
 
     const q =
-      "UPDATE users SET `name`=?,`city`=?,`website`=?,`profilePic`=?,`coverPic`=? WHERE id=? ";
+      "UPDATE users SET `name`=?, `city`=?, `website`=?, `profilePic`=?, `coverPic`=? WHERE id=?";
 
     db.query(
       q,
@@ -40,3 +67,5 @@ export const updateUser = (req, res) => {
     );
   });
 };
+
+export default router;
