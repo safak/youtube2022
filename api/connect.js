@@ -1,4 +1,4 @@
-import mysql from "mysql"
+import mysql from "mysql2"; //changed to mysql2 instead of mysql1 for compatible authetication protocol
 
 export const db = mysql.createConnection({
   host:"localhost",
