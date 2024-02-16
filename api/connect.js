@@ -1,8 +1,21 @@
-import mysql from "mysql"
+import mysql from "mysql2"; //changed to mysql2 instead of mysql1 for compatible authetication protocol
 
 export const db = mysql.createConnection({
   host:"localhost",
-  user:"root",
-  password:"Lamadev123",
-  database:"social"
-})
+  user:"voicesocialuser",
+  password:"SecurePassword124",
+  database:"voicesocialdb"
+});
+
+//logging connection test
+
+db.connect((err) => {
+  if (err) {
+    console.error('Error connecting to MySQL:', err);
+    return;
+  }
+  console.log('Connected to MySQL server');
+});
+
+db.end();
+

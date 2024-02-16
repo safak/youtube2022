@@ -57,7 +57,8 @@ const Login = () => {
               name="password"
               onChange={handleChange}
             />
-            {err && err}
+            {err && <p>{err.message}</p>}
+
             <button onClick={handleLogin}>Login</button>
           </form>
         </div>
