@@ -70,7 +70,8 @@ const Register = () => {
               name="name"
               onChange={handleChange}
             />
-            {err && err}
+            {err && <p>{err.message}</p>}
+
             <button onClick={handleClick}>Register</button>
           </form>
         </div>
